@@ -16,14 +16,14 @@ It is used to check hardware status and trigger actions for air effects such as 
 
 <h2>Public Functions</h2>
 
-<h3>Flow - Trigger airflow for duration</h3>
+<h3>Flow - Trigger airflow for specified duration</h3>
 public void Flow(int flevel, float duration = 0);<br>
 
 __Parameters__<br>
 flevel: airflow level [0-255]<br>
 duration (optional): in seconds, default = 0 for indefinite<br>
 
-<h3>HeatedFlow - Trigger heated airflow for duration</h3>
+<h3>HeatedFlow - Trigger heated airflow for specified duration</h3>
 public void HeatedFlow(int hlevel, float heatCtrl, int flevel, float duration = 0);<br>
 
 __Parameters__<br>
@@ -32,7 +32,7 @@ heatCtrl: heat power [0-1]<br>
 flevel: airflow level [0-255]<br>
 duration (optional): in seconds, default = 0 for indefinite<br>
 
-<h3>PreHeatWithFlow - Enable pre-heating (heater on with damper closed) with airflow for duration.</h3>
+<h3>PreHeatWithFlow - Enable pre-heating (heater on with damper closed) with airflow for specified duration</h3>
 public void PreHeatWithFlow(int hlevel, int flevel, float duration = 0)<br>
 
 __Parameters__<br>
@@ -58,6 +58,8 @@ public string GetCOMPortName();<br>
 
 <h3>StopAllEffects - Turn off all device effects</h3>
 public void StopAllEffects();<br>
+
+<h3>For Direct Control of Vortx</h3>
 
 <h3>SetHeaters - Turn off/on heaters</h3>
 public void setHeaters(int hlevel);<br>
