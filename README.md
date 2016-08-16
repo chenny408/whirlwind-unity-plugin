@@ -7,7 +7,7 @@ ARDUINO VERSION USED: Arduino 1.6.7<br/>
 >class in UnityEngine / Inherits from: MonoBehaviour
 
 <h2>Description</h2>
-The Whirlwind Controller provides access variable and functions for the Vortx haptic system.<br>
+The Whirlwind Controller provides access variables and functions for the Vortx haptic system.<br>
 
 It is used to check hardware status and trigger actions for air effects such as airflow speed, temperature levels, and burst events.<br>
 
@@ -33,7 +33,7 @@ flevel: airflow level [0-255]<br>
 duration (optional): in seconds, default = 0 for indefinite<br>
 
 <h3>PreHeatWithFlow - Enable pre-heating (heater on with damper closed) with airflow for specified duration</h3>
->public void PreHeatWithFlow(int hlevel, int flevel, float duration = 0)<br>
+>public void PreHeatWithFlow(int hlevel, int flevel, float duration = 0);<br>
 
 __Parameters__<br>
 hlevel: heat level [0-2]<br>
