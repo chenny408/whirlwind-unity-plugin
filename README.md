@@ -21,7 +21,7 @@ It is used to check hardware status and trigger actions for air effects such as 
 
 __Parameters__<br>
 flevel: airflow level [0-255]<br>
-duration (optional): in seconds, default = 0 for indefinite<br>
+duration (optional): in seconds, default = 0 for continuous<br>
 
 <h3>HeatedFlow - Trigger heated airflow for specified duration</h3>
 >public void HeatedFlow(int hlevel, float heatCtrl, int flevel, float duration = 0);<br>
@@ -30,7 +30,7 @@ __Parameters__<br>
 hlevel: heat level [0-2]<br>
 heatCtrl: heat power [0-1]<br>
 flevel: airflow level [0-255]<br>
-duration (optional): in seconds, default = 0 for indefinite<br>
+duration (optional): in seconds, default = 0 for continuous<br>
 
 <h3>PreHeatWithFlow - Enable pre-heating (heater on with damper closed) with airflow for specified duration</h3>
 >public void PreHeatWithFlow(int hlevel, int flevel, float duration = 0);<br>
@@ -38,7 +38,7 @@ duration (optional): in seconds, default = 0 for indefinite<br>
 __Parameters__<br>
 hlevel: heat level [0-2]<br>
 flevel: airflow level [0-255]<br>
-duration (optional): in seconds, default = 0 for indefinite<br>
+duration (optional): in seconds, default = 0 for continuous<br>
 
 <h3>ExplosionBurst - Trigger burst events</h3>
 >public void ExplosionBurst(int count, int flevel, int hlevel, float heatCtrl, float duration = 0);<br>
@@ -48,7 +48,7 @@ count: number of bursts [1-9]<br>
 flevel: airflow level [0-255]<br>
 hlevel: heat level [0-2]<br>
 heatCtrl: heat power [0-1]<br>
-duration (optional): in seconds, default = 0 for indefinite<br>
+duration (optional): in seconds, default = 0 for continuous<br>
 
 <h3>IsWhirlWindSystemReady - Check if the device is ready to send/receive commands</h3>
 >public bool IsWhirlWindSystemReady();<br>
