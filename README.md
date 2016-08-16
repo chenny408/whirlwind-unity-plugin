@@ -65,7 +65,7 @@ duration (optional): in seconds, default = 0 for indefinite<br>
 >public void setHeaters(int hlevel);<br>
 
 __Parameters__<br>
-hlevel: 0 (off), 1 (1 heater), 2 (2 heaters - future)<br>
+hlevel: 0 (off), 1 (1 heater on), 2 (2 heaters on - future)<br>
 
 <h3>FanMotorWrite - Set fan speed</h3>
 >public void FanMotorWrite(int flowValue);<br>
