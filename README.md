@@ -11,6 +11,8 @@ The Whirlwind Controller provides access variables and functions for the Vortx h
 
 It is used to check hardware status and trigger actions for air effects such as airflow speed, temperature levels, and burst events.<br>
 
+The controller uses the <a href="https://www.assetstore.unity3d.com/en/#!/content/6804">Uniduino</a> library, which will be provided upon request.<br>
+
 <h2>Variables</h2>
 **arduino**:  Returns the Arduino instance associated with the Vortx device
 
