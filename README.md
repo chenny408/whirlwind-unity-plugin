@@ -33,7 +33,7 @@ duration (optional): in seconds, default = 0 for continuous<br>
 >public void HeatedFlow(int hlevel, float heatCtrl, int flevel, float duration = 0);<br>
 
 __Parameters__<br>
-hlevel: heat level [0-2] <i>0 is off</i><br>
+hlevel: heat level [0-2], <i>0 is off</i><br>
 heatCtrl: heat power [0-1]<br>
 flevel: airflow level [0-255]<br>
 duration (optional): in seconds, default = 0 for continuous<br>
@@ -42,7 +42,7 @@ duration (optional): in seconds, default = 0 for continuous<br>
 >public void PreHeatWithFlow(int hlevel, int flevel, float duration = 0);<br>
 
 __Parameters__<br>
-hlevel: heat level [0-2] <i>0 is off</i><br>
+hlevel: heat level [0-2], <i>0 is off</i><br>
 flevel: airflow level [0-255]<br>
 duration (optional): in seconds, default = 0 for continuous<br>
 
@@ -52,7 +52,7 @@ duration (optional): in seconds, default = 0 for continuous<br>
 __Parameters__<br>
 count: number of bursts [1-9]<br>
 flevel: airflow level [0-255]<br>
-hlevel: heat level [0-2] <i>0 is off</i><br>
+hlevel: heat level [0-2], <i>0 is off</i><br>
 heatCtrl: heat power [0-1]<br>
 duration (optional): in seconds, default = 0 for continuous<br>
 
