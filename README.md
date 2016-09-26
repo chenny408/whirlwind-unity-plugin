@@ -11,7 +11,11 @@ The Whirlwind Controller provides access variables and functions for the Vortx h
 
 It is used to check hardware status and trigger actions for air effects such as airflow speed, temperature levels, and burst events.<br>
 
-The controller uses the <a href="https://www.assetstore.unity3d.com/en/#!/content/6804">Uniduino</a> library, which will be provided upon request.<br>
+You may need to install the standard <a href="https://www.arduino.cc/en/Main/Software">Arduino</a> software for the Vortx device to be recognized.
+
+The controller uses a modified <a href="https://www.assetstore.unity3d.com/en/#!/content/6804">Uniduino</a> library, which is included in the Uniduino directory.<br>
+
+If the serial port cannot be found, check the Optimization settings under File->Build Settings, click 'Player Settings', and search under 'Other settings', choose .NET 2.0 for 'API Compatibility Level'. 
 
 <h2>Variables</h2>
 **arduino**:  Returns the Arduino instance associated with the Vortx device
