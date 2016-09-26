@@ -358,13 +358,13 @@ public class WhirlWindController : MonoBehaviour {
 		}
 		else 
 		{
-			flowNow(CurrentFlowLevel, CurrentHeatLevel, CurrentHeatPower, 0); //set to current level
 			yield return new WaitForSeconds (durationSeconds);
 
+			//Debug.Log("Resetting device..");
 			CurrentFlowLevel = (int)FanLevel.fan0;
 			CurrentHeatLevel = (int)HeatLevel.heat0;
 			CurrentHeatPower = (int)HeatLevel.heat0;
-			flowNow((int)DefaultParameters.defaultFan, (int)DefaultParameters.defaultHeat, 0, 0);// returns to the set default levels of the fan and heaters
+			flowNow(CurrentFlowLevel, CurrentHeatLevel, CurrentHeatPower, 0); // returns to the set default levels of the fan and heaters
 		}
 	}
 
