@@ -1,4 +1,4 @@
-﻿#define IS_IRON_MAN
+#define IS_IRON_MAN
 //#define IS_THOR
 
 using UnityEngine;
@@ -53,10 +53,10 @@ enum DefaultParameters //IRON_MAN
 #if IS_THOR
 enum DefaultParameters //THOR
 {
-	defaultHeat=0, //normal off state
-	defaultFan=90, // normal wind setting
-	damperAmbient = 170, // damper position allows ambient
-	damperHeat = 112 // damper position allows max heat
+defaultHeat=0, //normal off state
+defaultFan=90, // normal wind setting
+damperAmbient = 170, // damper position allows ambient
+damperHeat = 112 // damper position allows max heat
 }
 #endif
 
@@ -90,7 +90,7 @@ public class WhirlWindController : MonoBehaviour {
 
 		StartCoroutine(Initialize ());
 	}
-		
+
 	// Configuration of Pins on the Arduino
 	void ConfigurePins () 
 	{
@@ -136,7 +136,7 @@ public class WhirlWindController : MonoBehaviour {
 			UpdateLEDRing (); // update the LEDs for different features
 		}
 	}
-		
+
 	// updates the lED colors based on features and functions
 	void UpdateLEDRing()
 	{
@@ -212,9 +212,17 @@ public class WhirlWindController : MonoBehaviour {
 		SetHeaters((int)hlevel); //set heat level
 		moveDamper(heatCtrl); //move damper
 
-		StartCoroutine (until (duration)); //keep the environmental condition on for the specified time in seconds
+		if (duration != 0) {
+			StartCoroutine(triggerDuration ((int)duration)); //keep the environmental condition on for the specified time in seconds
+		}
 	}
-		
+
+	IEnumerator triggerDuration(int sec)
+	{
+		yield return new WaitForSeconds (sec);
+		StopAllEffects();
+	}
+
 	// Set Heating Level 0, 1 or 2, active high (for video editor)
 	public void SetHeaters(int hlevel) 
 	{
@@ -284,7 +292,7 @@ public class WhirlWindController : MonoBehaviour {
 		//Debug.Log ("HeatedFlow: flow = " + flevel + " , heat = " + hlevel + ", power = " + heatCtrl + ", duration = " + duration);
 		flowNow (flevel, hlevel, heatCtrl, duration);
 	}
-		
+
 	//Pre-Heat with Fan
 	public void PreHeatWithFlow(int hlevel, int flevel, float duration = 0)
 	{
@@ -295,13 +303,13 @@ public class WhirlWindController : MonoBehaviour {
 
 		StartCoroutine (until (duration));
 	}
-		
+
 	// trigger single or multiple bursts at the specified heat level. Duration is the time (in seconds) for which the fan/heat remains on after burst(s)
 	public void ExplosionBurst(int count, int flevel, int hlevel, float heatCtrl, float duration = 0)
 	{
 		if (count == 0)
 			return;
-		
+
 		count = Mathf.Clamp(count, 1, 9); //limit to 9 bursts
 
 		HitBurst = true;
@@ -359,7 +367,7 @@ public class WhirlWindController : MonoBehaviour {
 			flowNow((int)DefaultParameters.defaultFan, (int)DefaultParameters.defaultHeat, 0, 0);// returns to the set default levels of the fan and heaters
 		}
 	}
-		
+
 	// Sets the fan to the specified speed (for video player)
 	public void FanMotorWrite(int flowValue)
 	{
