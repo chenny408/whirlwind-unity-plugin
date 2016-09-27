@@ -56,7 +56,7 @@ hlevel: heat level [0-2], <i>0 is off</i><br>
 heatCtrl: heat power [0-1]<br>
 duration (optional): in seconds, default = 0 for continuous<br>
 
-<h3>IsWhirlWindSystemReady - Check if the device is ready to send/receive commands</h3>
+<h3>IsWhirlWindSystemReady - Return true if a Vortx device is connected</h3>
 >public bool IsWhirlWindSystemReady();<br>
 
 <h3>GetCOMPortName - Get the COM port where the Vortx device is connected, i.e. COM5</h3>
