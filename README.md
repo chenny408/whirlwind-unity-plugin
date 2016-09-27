@@ -91,3 +91,8 @@ flowValue: set fan speed [0-255]<br>
 
 __Parameters__<br>
 damperValue: set damper value [0-1] based on temperature level, 0 for no heat, and 1 for full heat<br>
+
+<h2>Firmware</h2>
+If you need to update the firmware for whatever reason, you can use the precompiled binary hex files.  The with_bootloader version includes the bootloader code, which allows for serial uploads via USB.
+
+The easiest way to perform the upload is using <a href="http://xloader.russemotto.com/">XLoader</a> for Windows.
