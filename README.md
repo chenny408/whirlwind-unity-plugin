@@ -19,7 +19,7 @@ The controller uses a modified <a href="https://www.assetstore.unity3d.com/en/#!
 
 <h2>Best Practices</h2>
 
-1. Do not leave the heater on for more than 40 seconds (to avoid overheating)
+1. Do not leave the heater on for more than 40 minutes (to avoid overheating)
 2. Turn off fan *1 second* before triggering burst
 3. Wait at least *0.5 seconds* before turning on fan after burst event
 
