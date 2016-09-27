@@ -17,6 +17,12 @@ If the serial port cannot be found, check the Optimization settings under File->
 
 The controller uses a modified <a href="https://www.assetstore.unity3d.com/en/#!/content/6804">Uniduino</a> library, which is included in the Uniduino directory of the whirlwind-ui project which will be provided upon request.  You'll need to drop the folder into the Asset folder of your Unity project to begin integration.<br>
 
+<h2>Best Practices</h2>
+
+1. Do not leave the heater on for more than 40 seconds (to avoid overheating)
+2. Turn off fan before triggering burst
+3. Wait at least *1.5 seconds* before turning on fan after burst event
+
 <h2>Variables</h2>
 **arduino**:  Returns the Arduino instance associated with the Vortx device
 
