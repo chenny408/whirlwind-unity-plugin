@@ -1,4 +1,4 @@
-# whirlwind-unity-plugin
+U# whirlwind-unity-plugin
 Unity Plugin for Whirlwind Vortx<br/>
 UNITY VERSION USED: Unity Pro 5.4.0f3 (64 bit)<br/>
 ARDUINO VERSION USED: Arduino 1.6.7<br/>
@@ -11,7 +11,7 @@ The Whirlwind Controller provides access variables and functions for the Vortx h
 
 It is used to check hardware status and trigger actions for air effects such as airflow speed, temperature levels, and burst events.<br>
 
-You may need to install the standard <a href="https://www.arduino.cc/en/Main/Software">Arduino</a> software for the Vortx device to be recognized.
+You may need to install the standard <a href="https://www.arduino.cc/en/Main/Software">Arduino</a> software for the Vortx device to be recognized. If you do not want to install the entire IDE, select the /driver folder during the Update Driver Software process in the Device Manager (Windows).
 
 If the serial port cannot be found, check the Optimization settings under File->Build Settings, click 'Player Settings', and search under 'Other settings', choose .NET 2.0 for 'API Compatibility Level'.
 
