@@ -15,7 +15,7 @@ You may need to install the standard <a href="https://www.arduino.cc/en/Main/Sof
 
 If the serial port cannot be found, check the Optimization settings under File->Build Settings, click 'Player Settings', and search under 'Other settings', choose .NET 2.0 for 'API Compatibility Level'.
 
-The controller uses a modified <a href="https://www.assetstore.unity3d.com/en/#!/content/6804">Uniduino</a> library, which is included in the Uniduino directory of the <a href="https://bitbucket.org/chenny408/whirlwind-ui">whirlwind-ui project</a>.  You'll need to drop the folder into the Asset folder of your Unity project to begin integration.<br>
+The controller uses a modified <a href="https://www.assetstore.unity3d.com/en/#!/content/6804">Uniduino</a> library, which is included in the Uniduino directory of the <a href="https://bitbucket.org/chenny408/whirlwind-ui">whirlwind-ui project</a> (Vortx Utility).  You'll need to drop the folder into the Asset folder of your Unity project to begin integration.<br>
 
 <h2>Best Practices</h2>
 
