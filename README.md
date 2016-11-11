@@ -1,4 +1,4 @@
-U# whirlwind-unity-plugin
+# whirlwind-unity-plugin
 Unity Plugin for Whirlwind Vortx<br/>
 UNITY VERSION USED: Unity Pro 5.4.0f3 (64 bit)<br/>
 ARDUINO VERSION USED: Arduino 1.6.7<br/>
