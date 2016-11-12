@@ -1,5 +1,6 @@
-#define IS_IRON_MAN
+//#define IS_IRON_MAN
 //#define IS_THOR
+#define IS_HULK
 
 using UnityEngine;
 using System.Collections;
@@ -38,15 +39,26 @@ enum Pins
 	redPin = 9, //red LED pin
 	greenPin = 6, //green LED pin
 	bluePin = 10, //blue LED pin
+	fanBrakePin = 14
 }
+
+#if IS_HULK
+enum DefaultParameters //HULK
+{
+	defaultHeat=0, //normal off state
+	defaultFan=90, // normal wind state
+	damperAmbient = 125, // damper position allows ambient
+	damperHeat = 55 // damper position allows max heat
+}
+#endif
 
 #if IS_IRON_MAN
 enum DefaultParameters //IRON_MAN
 {
-	defaultHeat=0, //normal off state
-	defaultFan=90, // normal wind state
-	damperAmbient = 0, // damper position allows ambient
-	damperHeat = 60 // damper position allows max heat
+defaultHeat=0, //normal off state
+defaultFan=90, // normal wind state
+damperAmbient = 0, // damper position allows ambient
+damperHeat = 52 // damper position allows max heat
 }
 #endif
 
@@ -106,7 +118,8 @@ public class WhirlWindController : MonoBehaviour {
 		arduino.pinMode((int)Pins.heatPin2, PinMode.OUTPUT);
 
 		arduino.pinMode((int)Pins.burstControlPin, PinMode.OUTPUT);
-
+		arduino.pinMode((int)Pins.fanBrakePin, PinMode.OUTPUT);
+		
 		//COLOR LEDS
 		arduino.pinMode((int)Pins.redPin, PinMode.PWM);
 		arduino.pinMode((int)Pins.greenPin, PinMode.PWM);
@@ -117,7 +130,8 @@ public class WhirlWindController : MonoBehaviour {
 	IEnumerator Initialize()
 	{
 		arduino.digitalWrite ((int)Pins.burstControlPin, Arduino.LOW);
-
+		arduino.digitalWrite ((int)Pins.fanBrakePin, Arduino.LOW);
+		
 		yield return new WaitForSeconds (16 / 1000);
 		flowNow((int)FanLevel.fan0, (int)HeatLevel.heat0, 0, 0); //turn everything off
 	}
@@ -130,10 +144,10 @@ public class WhirlWindController : MonoBehaviour {
 			if (!InitializedHeatersComplete) 
 			{
 				InitializeHeaters (); // make sure heaters are off
-				SetLEDRingEXit(255,0,255);
+				//SetLEDRingEXit(255,0,255);
 			}
 
-			UpdateLEDRing (); // update the LEDs for different features
+			//UpdateLEDRing (); // update the LEDs for different features
 		}
 	}
 
