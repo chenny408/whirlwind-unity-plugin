@@ -1,6 +1,5 @@
-//#define IS_IRON_MAN
-//#define IS_THOR
-#define IS_HULK
+
+#define IS_VORTX_H
 
 using UnityEngine;
 using System.Collections;
@@ -42,33 +41,13 @@ enum Pins
 	fanBrakePin = 14
 }
 
-#if IS_HULK
+#if IS_VORTX_H
 enum DefaultParameters //HULK
 {
 	defaultHeat=0, //normal off state
 	defaultFan=90, // normal wind state
 	damperAmbient = 125, // damper position allows ambient
 	damperHeat = 55 // damper position allows max heat
-}
-#endif
-
-#if IS_IRON_MAN
-enum DefaultParameters //IRON_MAN
-{
-defaultHeat=0, //normal off state
-defaultFan=90, // normal wind state
-damperAmbient = 0, // damper position allows ambient
-damperHeat = 52 // damper position allows max heat
-}
-#endif
-
-#if IS_THOR
-enum DefaultParameters //THOR
-{
-defaultHeat=0, //normal off state
-defaultFan=90, // normal wind setting
-damperAmbient = 170, // damper position allows ambient
-damperHeat = 112 // damper position allows max heat
 }
 #endif
 
