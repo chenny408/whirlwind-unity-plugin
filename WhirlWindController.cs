@@ -414,6 +414,6 @@ public class WhirlWindController : MonoBehaviour {
 	// Sets the damper to the specified value based on temperature level
 	public void DamperServoWrite(float damperValue)
 	{
-		arduino.analogWrite ((int)Pins.damperPin, calculate_servo_pos(damperValue));
+		arduino.analogWrite ((int)Pins.damperPin, (int)damperValue);
 	}
 }
