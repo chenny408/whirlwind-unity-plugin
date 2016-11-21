@@ -148,7 +148,7 @@ public class WhirlWindController : MonoBehaviour {
 	void InitializeHeaters()
 	{
 		SetHeaters ((int)HeatLevel.heat0);
-		DamperServoWrite (0); // start damper at ambient side
+		DamperServoWrite ((int)DefaultParameters.damperAmbient); // start damper at ambient side
 		InitializedHeatersComplete = true;
 	}
 
@@ -336,7 +336,7 @@ public class WhirlWindController : MonoBehaviour {
 
 		arduino.analogWrite ((int)Pins.burstPin, 0);
 		flowNow((int)FanLevel.fan0, (int)HeatLevel.heat0, 0, 0);
-		DamperServoWrite (0);
+		DamperServoWrite ((int)DefaultParameters.damperAmbient);
 		SetLEDRingEXit (0, 0, 0);
 	}
 
